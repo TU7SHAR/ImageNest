@@ -49,8 +49,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="canonical" href="https://nestimage.vercel.app" />
-        <link rel="canonical" href="https://nestimagebytushar.vercel.app" />
-        <link rel="canonical" href="https://imagenestbytushar.vercel.app" />
         <link rel="apple-touch-icon" sizes="180x180" href="/iN.png"></link>
       </head>
       <body
