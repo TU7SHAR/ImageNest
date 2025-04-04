@@ -34,7 +34,7 @@ const Nav = () => {
                   <span className="absolute left-0 bottom-0 h-0.5 w-full bg-black transition-all duration-300 transform scale-x-0 group-hover:scale-x-100 origin-left"></span>
                 </Link>
                 <Link
-                  href="/about"
+                  href="/About"
                   className="ml-4 text-gray-700 hover:text-blue-600 hover:bg-blue-100 px-3 py-2 rounded-md transition-colors"
                 >
                   About

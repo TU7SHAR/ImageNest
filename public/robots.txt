@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://nestimage.vercel.app
+
+# Sitemaps
+Sitemap: https://nestimage.vercel.app/sitemap.xml
