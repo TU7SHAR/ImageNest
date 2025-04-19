@@ -95,7 +95,7 @@ const page = () => {
           </form>
           <p className="text-sm text-center">
             Don't have an account?{" "}
-            <Link href="/" className="text-blue-600 hover:underline">
+            <Link href="/Register" className="text-blue-600 hover:underline">
               Sign up
             </Link>
           </p>

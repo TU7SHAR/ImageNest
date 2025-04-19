@@ -50,6 +50,33 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="canonical" href="https://nestimage.vercel.app" />
         <link rel="apple-touch-icon" sizes="180x180" href="/iN.png"></link>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "NestImage",
+              url: "https://nestimage.vercel.app",
+              description:
+                "NestImage is your ultimate platform for exploring and downloading high-quality images. Discover nature, portraits, events, and abstract art effortlessly.",
+              publisher: {
+                "@type": "Organization",
+                name: "NestImage Team",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "https://nestimage.vercel.app/og-image.jpg",
+                },
+              },
+              potentialAction: {
+                "@type": "SearchAction",
+                target:
+                  "https://nestimage.vercel.app/search?q={search_term_string}",
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        ></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100`}

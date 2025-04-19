@@ -10,7 +10,7 @@ function HomePage() {
           <Image
             src="/gallery.jpg" // Replace with your hero image path
             alt="Beautiful photography collage"
-            layout="fill"
+            fill
             objectFit="cover"
             className="opacity-90"
           />
@@ -23,7 +23,7 @@ function HomePage() {
                 Discover, share, and preserve your most precious visual moments
               </p>
               <Link
-                href="/gallery"
+                href="/Gallery"
                 className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Explore Gallery

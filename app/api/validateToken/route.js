@@ -10,7 +10,6 @@ export async function POST(request) {
 
   try {
     const secret = process.env.JWT_SECRET || "admin";
-    console.log("Secret:", secret);
     const decoded = jwt.verify(token, secret); // Verify the token
 
     return NextResponse.json({ valid: true, decoded }); // Return valid token response

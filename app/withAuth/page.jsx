@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import NestImage from "../components/NestImage";
 
 function withAuth(WrappedComponent) {
   return function ProtectedRoutes(props) {
@@ -40,7 +41,8 @@ function withAuth(WrappedComponent) {
     }, [router]);
 
     if (isLoading) {
-      return <div>Loading...</div>;
+      debugger;
+      return <NestImage />;
     }
 
     if (!isAuthorized) {

@@ -48,19 +48,20 @@ const Nav = () => {
                   Home
                 </Link>
                 <Link
-                  href="/login"
+                  href="/More"
                   className="text-gray-700 hover:text-blue-600 hover:bg-blue-100 px-3 py-2 rounded-md transition-colors"
                 >
-                  More
+                  More Categories
                 </Link>
                 <Link
-                  href="/Register"
+                  href="/Login"
                   className="text-gray-700 hover:text-blue-600 hover:bg-blue-100 px-3 py-2 rounded-md transition-colors"
                 >
-                  Register
+                  Login
                 </Link>
                 <Link
-                  href="/register"
+                  href="https://tushargautamportfolio.vercel.app/"
+                  target="_blank"
                   className="text-black relative group px-3 py-2 rounded-md transition-colors"
                 >
                   <span className="relative z-10">By Tushar</span>
@@ -123,22 +124,29 @@ const Nav = () => {
                 Home
               </Link>
               <Link
-                href="/about"
+                href="/About"
                 className="text-gray-700 hover:text-blue-600 hover:bg-blue-100 block px-3 py-2 rounded-md transition-colors"
               >
                 About
               </Link>
               <Link
-                href="/login"
+                href="/Login"
                 className="text-gray-700 hover:text-blue-600 hover:bg-blue-100 block px-3 py-2 rounded-md transition-colors"
               >
                 Login
               </Link>
               <Link
-                href="/register"
+                href="/Register"
                 className="text-gray-700 hover:text-blue-600 hover:bg-blue-100 block px-3 py-2 rounded-md transition-colors"
               >
                 Register
+              </Link>
+              <Link
+                href="https://tushargautamportfolio.vercel.app/"
+                className="text-black relative group px-3 py-2 rounded-md transition-colors"
+              >
+                <span className="relative z-10">By Tushar</span>
+                <span className="absolute inset-0 bg-gradient-to-r from-red-500  to-purple-500 opacity-50 group-hover:opacity-70 transition-opacity duration-300 rounded-md"></span>
               </Link>
             </div>
           </div>

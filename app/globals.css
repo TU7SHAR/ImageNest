@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+/* styles/globals.css */
+.skeleton-container {
+  padding: 1rem;
+  background-color: #f9f9f9; /* Light gray background */
+  border-radius: 8px; /* Rounded corners */
+  margin: 10px 0;
+}
+
+/* Apply a general format for your section */
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
