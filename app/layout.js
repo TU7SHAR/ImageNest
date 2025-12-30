@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,6 +13,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// 1. NEW: Viewport export handles dimensions and theme color now
+export const viewport = {
+  width: "device-width",
+  initialScale: 1.0,
+  themeColor: "#ffffff",
+};
+
+// 2. UPDATED: Removed viewport and themeColor from here
 export const metadata = {
   title: "NestImage - Explore and Download Stunning Images",
   description:
@@ -18,8 +28,6 @@ export const metadata = {
   keywords:
     "images, download images, high-quality images, image gallery, NestImage, explore images, free images, photography, art, memories",
   author: "NestImage Team",
-  viewport: "width=device-width, initial-scale=1.0",
-  themeColor: "#ffffff",
   openGraph: {
     title: "NestImage - Explore and Download Stunning Images",
     description:
@@ -81,7 +89,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100`}
       >
+        {" "}
+        <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );

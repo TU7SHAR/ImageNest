@@ -40,8 +40,9 @@ function HomePage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {["Nature", "Portraits", "Events", "Abstract"].map((category) => (
-                <div
+                <Link
                   key={category}
+                  href={`/Gallery/${category.toLowerCase()}`}
                   className="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105"
                 >
                   <Image
@@ -56,7 +57,7 @@ function HomePage() {
                       {category}
                     </h3>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

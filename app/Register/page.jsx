@@ -30,7 +30,7 @@ const register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle registration logic here
+    //reg
     try {
       const response = await axios.post("/api/createUser", form);
       if (response.status === 201) {

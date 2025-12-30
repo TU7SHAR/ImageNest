@@ -3,7 +3,6 @@ import JSZip from "jszip";
 import { saveAs } from "file-saver";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import Nav from "../components/Nav";
 
 const GalleryPage = () => {
   const [images, setImages] = useState([]); // Store images
@@ -21,7 +20,17 @@ const GalleryPage = () => {
         throw new Error("Failed to fetch images");
       }
       const data = await response.json();
-      setImages((prevImages) => [...prevImages, ...data]); // Append new images
+      // NEW CODE (Filters duplicates)
+      setImages((prevImages) => {
+        // 1. Create a list of IDs we already have
+        const existingIds = new Set(prevImages.map((img) => img.id));
+
+        // 2. Only keep new images that don't match existing IDs
+        const uniqueNewImages = data.filter((img) => !existingIds.has(img.id));
+
+        // 3. Combine them
+        return [...prevImages, ...uniqueNewImages];
+      });
     } catch (error) {
       console.error("Error fetching images:", error);
     } finally {
@@ -71,7 +80,6 @@ const GalleryPage = () => {
   };
   return (
     <div>
-      <Nav />
       <div className="container mx-auto p-4">
         <h1 className="text-3xl font-thin border-b border-brown-500 space-x-0.5 text-center mb-6">
           Gallery of Inspiration
