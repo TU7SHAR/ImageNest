@@ -1,32 +1,36 @@
-import { NextResponse } from "next/server";
+// app/sitemap.js
 
-export async function GET() {
+export default function sitemap() {
+  // 1. Your base domain
   const baseUrl = "https://nestimage.vercel.app";
 
-  // List of all important pages on your website
-  const pages = ["", "/about", "/gallery", "/login", "/register"];
+  // 2. Your Static Pages (Home, About, etc.)
+  const routes = ["", "/about", "/gallery", "/login", "/register"].map(
+    (route) => ({
+      url: `${baseUrl}${route}`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: route === "" ? 1 : 0.8,
+    })
+  );
 
-  // Generate the sitemap XML
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  ${pages
-    .map(
-      (page) => `
-    <url>
-      <loc>${baseUrl}${page}</loc>
-      <lastmod>${new Date().toISOString()}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>${page === "" ? "1.0" : "0.8"}</priority>
-    </url>
-  `
-    )
-    .join("")}
-</urlset>`;
+  // 3. Your Dynamic Categories (Crucial for SEO!)
+  // These are the categories you want Google to rank you for.
+  const categories = [
+    "nature",
+    "cars",
+    "technology",
+    "abstract",
+    "people",
+    "animals",
+    "architecture",
+  ].map((category) => ({
+    url: `${baseUrl}/Gallery/${category}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: 0.9, // High priority so Google finds your images
+  }));
 
-  // Return the sitemap as a response
-  return new NextResponse(sitemap, {
-    headers: {
-      "Content-Type": "application/xml",
-    },
-  });
+  // 4. Combine them
+  return [...routes, ...categories];
 }
