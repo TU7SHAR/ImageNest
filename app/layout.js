@@ -79,6 +79,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta
+          name="google-site-verification"
+          content="rBrrE7t3BR48ls4auCo6InKHWvpdbTLE5mKH3TuT7mY"
+        />
         <link rel="canonical" href="https://nestimage.vercel.app" />
         <link rel="apple-touch-icon" sizes="180x180" href="/iN.png" />
 
