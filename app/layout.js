@@ -115,6 +115,7 @@ export default function RootLayout({ children }) {
             }),
           }}
         />
+        <Analytics />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100 flex flex-col min-h-screen`}
