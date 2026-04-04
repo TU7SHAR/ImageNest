@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 
 function HomePage() {
   return (
@@ -87,6 +88,11 @@ function HomePage() {
             </div>
           </div>
         </section>
+        <Script
+          src="http://127.0.0.1:5000/static/js/embed.js"
+          data-bot-id="2"
+          defer
+        />
       </div>
     </>
   );
