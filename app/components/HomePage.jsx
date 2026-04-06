@@ -64,7 +64,6 @@ function HomePage() {
           </div>
         </section>
 
-        {/* Latest Uploads */}
         <section className="py-16 bg-gray-200">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
@@ -88,10 +87,12 @@ function HomePage() {
             </div>
           </div>
         </section>
+        <Script id="botfactory-init" strategy="beforeInteractive">
+          {`window.BOTFACTORY_ID = "1";`}
+        </Script>
         <Script
-          src="http://127.0.0.1:5000/static/js/embed.js"
-          data-bot-id="2"
-          defer
+          src="https://chatbot-t96m.onrender.com/static/js/embed.js"
+          strategy="afterInteractive"
         />
       </div>
     </>
