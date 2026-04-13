@@ -87,7 +87,12 @@ function HomePage() {
             </div>
           </div>
         </section>
-
+{/* chat.bot Widget */}
+<Script 
+  src="https://chatbot-c53nl.ondigitalocean.app/static/js/embed.js" 
+  data-bot-id="15" 
+  strategy="afterInteractive" 
+/>
       </div>
     </>
   );
