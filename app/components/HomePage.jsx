@@ -9,7 +9,7 @@ function HomePage() {
       <div className="min-h-screen bg-gray-100">
         <div className="relative h-[600px]">
           <Image
-            src="/gallery.jpg" // Replace with your hero image path
+            src="/gallery.jpg"
             alt="Beautiful photography collage"
             fill
             objectFit="cover"
@@ -47,7 +47,7 @@ function HomePage() {
                   className="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105"
                 >
                   <Image
-                    src={`/${category.toLowerCase()}.jpg`} // Replace with actual image paths
+                    src={`/${category.toLowerCase()}.jpg`}
                     alt={category}
                     width={400}
                     height={300}
@@ -76,7 +76,7 @@ function HomePage() {
                   className="bg-white rounded-xl shadow-lg overflow-hidden"
                 >
                   <Image
-                    src={`/${image}.jpg`} // Replace with actual image paths
+                    src={`/${image}.jpg`}
                     alt={`Latest Upload ${image}`}
                     width={400}
                     height={300}
@@ -87,11 +87,13 @@ function HomePage() {
             </div>
           </div>
         </section>
-{/* chat.bot Widget */}
-<Script id="chatbot-init" strategy="beforeInteractive">
-  {`window.CHATBOT_ID = "15";`}
-</Script>
-<Script src="https://chatbot-c53nl.ondigitalocean.app/static/js/embed.js" strategy="afterInteractive" />
+
+        {/* chat.bot Widget - Simplified & Robust */}
+        <Script 
+          src="https://chatbot-c53nl.ondigitalocean.app/static/js/embed.js" 
+          data-bot-id="15"
+          strategy="afterInteractive" 
+        />
       </div>
     </>
   );
