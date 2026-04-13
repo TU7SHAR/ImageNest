@@ -88,13 +88,6 @@ function HomePage() {
           </div>
         </section>
 
-        {/* chat.bot Widget - Simplified & Robust */}
-{/* chat.bot Widget */}
-<Script 
-  src="http://localhost:5000/static/js/embed.js" 
-  data-bot-id="15" 
-  strategy="afterInteractive" 
-/>
       </div>
     </>
   );
