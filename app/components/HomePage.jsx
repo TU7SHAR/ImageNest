@@ -87,6 +87,11 @@ function HomePage() {
             </div>
           </div>
         </section>
+        {/* BotFactory Widget */}
+<Script id="botfactory-init" strategy="beforeInteractive">
+  {`window.BOTFACTORY_ID = "43054281-47ac-4e70-947d-cc8a8c772c7e";`}
+</Script>
+<Script src="https://chatbot-c53nl.ondigitalocean.app/static/js/embed.js" strategy="afterInteractive" />
       </div>
     </>
   );
