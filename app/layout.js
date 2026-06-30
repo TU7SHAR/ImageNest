@@ -126,6 +126,9 @@ export default function RootLayout({ children }) {
         <main className="flex-grow">{children}</main>
         <Footer />
       </body>
+        <!-- Bubbl Widget -->
+<script src="https://coral-app-jbybo.ondigitalocean.app/static/js/embed.js"
+  data-bot-id="14"></script>
     </html>
   );
 }
